@@ -1,0 +1,443 @@
+00:52:13 **** Incremental Build of configuration Debug for project binarycounter_led ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DNUCLEO_F401RE -DSTM32 -DSTM32F401RETx -DSTM32F4 -c -I"C:/Users/Mujaid/Desktop/STM32/binarycounter_led/drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DNUCLEO_F401RE -DSTM32 -DSTM32F401RETx -DSTM32F4 -c -I"C:/Users/Mujaid/Desktop/STM32/binarycounter_led/drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DNUCLEO_F401RE -DSTM32 -DSTM32F401RETx -DSTM32F4 -c -I"C:/Users/Mujaid/Desktop/STM32/binarycounter_led/drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/sysmem.o"
+../Src/main.c:34:4: warning: #warning "FPU is not initialized, but the project is compiling for an FPU. Please initialize the FPU before use." [-Wcpp]
+   34 |   #warning "FPU is not initialized, but the project is compiling for an FPU. Please initialize the FPU before use."
+      |    ^~~~~~~
+arm-none-eabi-gcc -o "binarycounter_led.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Mujaid\Desktop\STM32\binarycounter_led\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="binarycounter_led.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/bin/ld.exe: ./Src/main.o: in function `main':
+C:/Users/Mujaid/Desktop/STM32/binarycounter_led/Debug/../Src/main.c:42:(.text.main+0xa): undefined reference to `GPIO_PeriClockControl'
+C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/bin/ld.exe: C:/Users/Mujaid/Desktop/STM32/binarycounter_led/Debug/../Src/main.c:52:(.text.main+0x36): undefined reference to `GPIO_Init'
+C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/bin/ld.exe: C:/Users/Mujaid/Desktop/STM32/binarycounter_led/Debug/../Src/main.c:62:(.text.main+0x62): undefined reference to `GPIO_Init'
+C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/bin/ld.exe: C:/Users/Mujaid/Desktop/STM32/binarycounter_led/Debug/../Src/main.c:72:(.text.main+0x84): undefined reference to `GPIO_Init'
+C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/bin/ld.exe: C:/Users/Mujaid/Desktop/STM32/binarycounter_led/Debug/../Src/main.c:83:(.text.main+0xa4): undefined reference to `GPIO_Init'
+C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/bin/ld.exe: C:/Users/Mujaid/Desktop/STM32/binarycounter_led/Debug/../Src/main.c:90:(.text.main+0xbe): undefined reference to `GPIO_WriteToOutputPin'
+C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/bin/ld.exe: C:/Users/Mujaid/Desktop/STM32/binarycounter_led/Debug/../Src/main.c:93:(.text.main+0xd6): undefined reference to `GPIO_WriteToOutputPin'
+C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/bin/ld.exe: C:/Users/Mujaid/Desktop/STM32/binarycounter_led/Debug/../Src/main.c:96:(.text.main+0xee): undefined reference to `GPIO_WriteToOutputPin'
+C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/bin/ld.exe: C:/Users/Mujaid/Desktop/STM32/binarycounter_led/Debug/../Src/main.c:100:(.text.main+0x106): undefined reference to `GPIO_WriteToOutputPin'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:63: binarycounter_led.elf] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+00:56:13 **** Clean-only build of configuration Debug for project DriverDev ****
+make -j16 clean 
+rm -rf ./drivers/src/stm32f401xx_gpio_driver.cyclo ./drivers/src/stm32f401xx_gpio_driver.d ./drivers/src/stm32f401xx_gpio_driver.o ./drivers/src/stm32f401xx_gpio_driver.su ./drivers/src/stm32f401xx_spi_driver.cyclo ./drivers/src/stm32f401xx_spi_driver.d ./drivers/src/stm32f401xx_spi_driver.o ./drivers/src/stm32f401xx_spi_driver.su
+rm -rf ./Startup/startup_stm32f401retx.d ./Startup/startup_stm32f401retx.o
+rm -rf ./Src/main.cyclo ./Src/main.d ./Src/main.o ./Src/main.su ./Src/syscalls.cyclo ./Src/syscalls.d ./Src/syscalls.o ./Src/syscalls.su ./Src/sysmem.cyclo ./Src/sysmem.d ./Src/sysmem.o ./Src/sysmem.su
+rm -rf DriverDev.elf DriverDev.list DriverDev.map default.size.stdout
+ 
+00:56:13 **** Clean-only build of configuration Debug for project binarycounter_led ****
+make -j16 clean 
+rm -rf ./Startup/startup_stm32f401retx.d ./Startup/startup_stm32f401retx.o
+rm -rf ./Src/main.cyclo ./Src/main.d ./Src/main.o ./Src/main.su ./Src/syscalls.cyclo ./Src/syscalls.d ./Src/syscalls.o ./Src/syscalls.su ./Src/sysmem.cyclo ./Src/sysmem.d ./Src/sysmem.o ./Src/sysmem.su
+rm -rf binarycounter_led.elf binarycounter_led.list binarycounter_led.map default.size.stdout
+ 
+00:56:13 **** Clean-only build of configuration Debug for project led_assignment ****
+make -j16 clean 
+rm -rf ./drivers/src/stm32f401xx_gpio_driver.cyclo ./drivers/src/stm32f401xx_gpio_driver.d ./drivers/src/stm32f401xx_gpio_driver.o ./drivers/src/stm32f401xx_gpio_driver.su
+rm -rf ./Startup/startup_stm32f401retx.d ./Startup/startup_stm32f401retx.o
+rm -rf ./Src/main.cyclo ./Src/main.d ./Src/main.o ./Src/main.su ./Src/syscalls.cyclo ./Src/syscalls.d ./Src/syscalls.o ./Src/syscalls.su ./Src/sysmem.cyclo ./Src/sysmem.d ./Src/sysmem.o ./Src/sysmem.su
+rm -rf default.size.stdout led_assignment.elf led_assignment.list led_assignment.map
+ 
+00:56:14 **** Build of configuration Debug for project DriverDev ****
+make -j16 all 
+arm-none-eabi-gcc "../drivers/src/stm32f401xx_gpio_driver.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DNUCLEO_F401RE -DSTM32 -DSTM32F401RETx -DSTM32F4 -c -I"C:/Users/Mujaid/Desktop/STM32/DriverDev/drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"drivers/src/stm32f401xx_gpio_driver.d" -MT"drivers/src/stm32f401xx_gpio_driver.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "drivers/src/stm32f401xx_gpio_driver.o"
+arm-none-eabi-gcc "../drivers/src/stm32f401xx_spi_driver.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DNUCLEO_F401RE -DSTM32 -DSTM32F401RETx -DSTM32F4 -c -I"C:/Users/Mujaid/Desktop/STM32/DriverDev/drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"drivers/src/stm32f401xx_spi_driver.d" -MT"drivers/src/stm32f401xx_spi_driver.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "drivers/src/stm32f401xx_spi_driver.o"
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f401retx.d" -MT"Startup/startup_stm32f401retx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Startup/startup_stm32f401retx.o" "../Startup/startup_stm32f401retx.s"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DNUCLEO_F401RE -DSTM32 -DSTM32F401RETx -DSTM32F4 -c -I"C:/Users/Mujaid/Desktop/STM32/DriverDev/drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DNUCLEO_F401RE -DSTM32 -DSTM32F401RETx -DSTM32F4 -c -I"C:/Users/Mujaid/Desktop/STM32/DriverDev/drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DNUCLEO_F401RE -DSTM32 -DSTM32F401RETx -DSTM32F4 -c -I"C:/Users/Mujaid/Desktop/STM32/DriverDev/drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/sysmem.o"
+../Src/main.c:114:4: warning: #warning "FPU is not initialized, but the project is compiling for an FPU. Please initialize the FPU before use." [-Wcpp]
+  114 |   #warning "FPU is not initialized, but the project is compiling for an FPU. Please initialize the FPU before use."
+      |    ^~~~~~~
+arm-none-eabi-gcc -o "DriverDev.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Mujaid\Desktop\STM32\DriverDev\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="DriverDev.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: DriverDev.elf
+ 
+arm-none-eabi-size  DriverDev.elf 
+arm-none-eabi-objdump -h -S DriverDev.elf  > "DriverDev.list"
+   text	   data	    bss	    dec	    hex	filename
+   1624	      0	   1568	   3192	    c78	DriverDev.elf
+Finished building: default.size.stdout
+ 
+Finished building: DriverDev.list
+ 
+00:56:15 **** Clean-only build of configuration Debug for project binarycounter_led ****
+make -j16 clean 
+rm -rf ./Startup/startup_stm32f401retx.d ./Startup/startup_stm32f401retx.o
+rm -rf ./Src/main.cyclo ./Src/main.d ./Src/main.o ./Src/main.su ./Src/syscalls.cyclo ./Src/syscalls.d ./Src/syscalls.o ./Src/syscalls.su ./Src/sysmem.cyclo ./Src/sysmem.d ./Src/sysmem.o ./Src/sysmem.su
+rm -rf binarycounter_led.elf binarycounter_led.list binarycounter_led.map default.size.stdout
+ 
+00:56:15 **** Build of configuration Debug for project binarycounter_led ****
+make -j16 all 
+arm-none-eabi-gcc "../drivers/src/stm32f401xx_gpio_driver.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DNUCLEO_F401RE -DSTM32 -DSTM32F401RETx -DSTM32F4 -c -I"C:/Users/Mujaid/Desktop/STM32/binarycounter_led/drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"drivers/src/stm32f401xx_gpio_driver.d" -MT"drivers/src/stm32f401xx_gpio_driver.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "drivers/src/stm32f401xx_gpio_driver.o"
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f401retx.d" -MT"Startup/startup_stm32f401retx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Startup/startup_stm32f401retx.o" "../Startup/startup_stm32f401retx.s"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DNUCLEO_F401RE -DSTM32 -DSTM32F401RETx -DSTM32F4 -c -I"C:/Users/Mujaid/Desktop/STM32/binarycounter_led/drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DNUCLEO_F401RE -DSTM32 -DSTM32F401RETx -DSTM32F4 -c -I"C:/Users/Mujaid/Desktop/STM32/binarycounter_led/drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DNUCLEO_F401RE -DSTM32 -DSTM32F401RETx -DSTM32F4 -c -I"C:/Users/Mujaid/Desktop/STM32/binarycounter_led/drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/sysmem.o"
+../Src/main.c:34:4: warning: #warning "FPU is not initialized, but the project is compiling for an FPU. Please initialize the FPU before use." [-Wcpp]
+   34 |   #warning "FPU is not initialized, but the project is compiling for an FPU. Please initialize the FPU before use."
+      |    ^~~~~~~
+arm-none-eabi-gcc -o "binarycounter_led.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Mujaid\Desktop\STM32\binarycounter_led\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="binarycounter_led.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: binarycounter_led.elf
+ 
+arm-none-eabi-size  binarycounter_led.elf 
+arm-none-eabi-objdump -h -S binarycounter_led.elf  > "binarycounter_led.list"
+   text	   data	    bss	    dec	    hex	filename
+   1588	      0	   1568	   3156	    c54	binarycounter_led.elf
+Finished building: default.size.stdout
+ 
+Finished building: binarycounter_led.list
+ 
+00:56:16 **** Build of configuration Debug for project led_assignment ****
+make -j16 all 
+arm-none-eabi-gcc "../drivers/src/stm32f401xx_gpio_driver.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DNUCLEO_F401RE -DSTM32 -DSTM32F401RETx -DSTM32F4 -c -I../Inc -I"C:/Users/Mujaid/Desktop/STM32/led_assignment/drivers/inc" -I"C:/Users/Mujaid/Desktop/STM32/led_assignment/drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"drivers/src/stm32f401xx_gpio_driver.d" -MT"drivers/src/stm32f401xx_gpio_driver.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "drivers/src/stm32f401xx_gpio_driver.o"
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f401retx.d" -MT"Startup/startup_stm32f401retx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Startup/startup_stm32f401retx.o" "../Startup/startup_stm32f401retx.s"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DNUCLEO_F401RE -DSTM32 -DSTM32F401RETx -DSTM32F4 -c -I../Inc -I"C:/Users/Mujaid/Desktop/STM32/led_assignment/drivers/inc" -I"C:/Users/Mujaid/Desktop/STM32/led_assignment/drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DNUCLEO_F401RE -DSTM32 -DSTM32F401RETx -DSTM32F4 -c -I../Inc -I"C:/Users/Mujaid/Desktop/STM32/led_assignment/drivers/inc" -I"C:/Users/Mujaid/Desktop/STM32/led_assignment/drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DNUCLEO_F401RE -DSTM32 -DSTM32F401RETx -DSTM32F4 -c -I../Inc -I"C:/Users/Mujaid/Desktop/STM32/led_assignment/drivers/inc" -I"C:/Users/Mujaid/Desktop/STM32/led_assignment/drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/sysmem.o"
+../Src/main.c:34:4: warning: #warning "FPU is not initialized, but the project is compiling for an FPU. Please initialize the FPU before use." [-Wcpp]
+   34 |   #warning "FPU is not initialized, but the project is compiling for an FPU. Please initialize the FPU before use."
+      |    ^~~~~~~
+arm-none-eabi-gcc -o "led_assignment.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Mujaid\Desktop\STM32\led_assignment\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="led_assignment.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: led_assignment.elf
+ 
+arm-none-eabi-size  led_assignment.elf 
+arm-none-eabi-objdump -h -S led_assignment.elf  > "led_assignment.list"
+   text	   data	    bss	    dec	    hex	filename
+   1660	      0	   1568	   3228	    c9c	led_assignment.elf
+Finished building: default.size.stdout
+ 
+Finished building: led_assignment.list
+ 
+17:45:36 **** Build of configuration Debug for project DriverDev ****
+make -j16 all 
+arm-none-eabi-size  DriverDev.elf 
+   text	   data	    bss	    dec	    hex	filename
+   1624	      0	   1568	   3192	    c78	DriverDev.elf
+Finished building: default.size.stdout
+ 
+17:45:38 **** Clean-only build of configuration Debug for project binarycounter_led ****
+make -j16 clean 
+rm -rf ./drivers/src/stm32f401xx_gpio_driver.cyclo ./drivers/src/stm32f401xx_gpio_driver.d ./drivers/src/stm32f401xx_gpio_driver.o ./drivers/src/stm32f401xx_gpio_driver.su
+rm -rf ./Startup/startup_stm32f401retx.d ./Startup/startup_stm32f401retx.o
+rm -rf ./Src/main.cyclo ./Src/main.d ./Src/main.o ./Src/main.su ./Src/syscalls.cyclo ./Src/syscalls.d ./Src/syscalls.o ./Src/syscalls.su ./Src/sysmem.cyclo ./Src/sysmem.d ./Src/sysmem.o ./Src/sysmem.su
+rm -rf binarycounter_led.elf binarycounter_led.list binarycounter_led.map default.size.stdout
+ 
+17:45:39 **** Build of configuration Debug for project binarycounter_led ****
+make -j16 all 
+arm-none-eabi-gcc "../drivers/src/stm32f401xx_gpio_driver.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DNUCLEO_F401RE -DSTM32 -DSTM32F401RETx -DSTM32F4 -c -I"C:/Users/Mujaid/Desktop/STM32/binarycounter_led/drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"drivers/src/stm32f401xx_gpio_driver.d" -MT"drivers/src/stm32f401xx_gpio_driver.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "drivers/src/stm32f401xx_gpio_driver.o"
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f401retx.d" -MT"Startup/startup_stm32f401retx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Startup/startup_stm32f401retx.o" "../Startup/startup_stm32f401retx.s"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DNUCLEO_F401RE -DSTM32 -DSTM32F401RETx -DSTM32F4 -c -I"C:/Users/Mujaid/Desktop/STM32/binarycounter_led/drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DNUCLEO_F401RE -DSTM32 -DSTM32F401RETx -DSTM32F4 -c -I"C:/Users/Mujaid/Desktop/STM32/binarycounter_led/drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DNUCLEO_F401RE -DSTM32 -DSTM32F401RETx -DSTM32F4 -c -I"C:/Users/Mujaid/Desktop/STM32/binarycounter_led/drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/sysmem.o"
+../Src/main.c:34:4: warning: #warning "FPU is not initialized, but the project is compiling for an FPU. Please initialize the FPU before use." [-Wcpp]
+   34 |   #warning "FPU is not initialized, but the project is compiling for an FPU. Please initialize the FPU before use."
+      |    ^~~~~~~
+arm-none-eabi-gcc -o "binarycounter_led.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Mujaid\Desktop\STM32\binarycounter_led\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="binarycounter_led.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: binarycounter_led.elf
+ 
+arm-none-eabi-size  binarycounter_led.elf 
+arm-none-eabi-objdump -h -S binarycounter_led.elf  > "binarycounter_led.list"
+   text	   data	    bss	    dec	    hex	filename
+   1588	      0	   1568	   3156	    c54	binarycounter_led.elf
+Finished building: default.size.stdout
+ 
+Finished building: binarycounter_led.list
+ 
+17:45:44 **** Build of configuration Debug for project led_assignment ****
+make -j16 all 
+arm-none-eabi-size  led_assignment.elf 
+   text	   data	    bss	    dec	    hex	filename
+   1660	      0	   1568	   3228	    c9c	led_assignment.elf
+Finished building: default.size.stdout
+ 
+17:52:31 **** Incremental Build of configuration Debug for project binarycounter_led ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DNUCLEO_F401RE -DSTM32 -DSTM32F401RETx -DSTM32F4 -c -I"C:/Users/Mujaid/Desktop/STM32/binarycounter_led/drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+../Src/main.c:34:4: warning: #warning "FPU is not initialized, but the project is compiling for an FPU. Please initialize the FPU before use." [-Wcpp]
+   34 |   #warning "FPU is not initialized, but the project is compiling for an FPU. Please initialize the FPU before use."
+      |    ^~~~~~~
+arm-none-eabi-gcc -o "binarycounter_led.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Mujaid\Desktop\STM32\binarycounter_led\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="binarycounter_led.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: binarycounter_led.elf
+ 
+arm-none-eabi-size  binarycounter_led.elf 
+arm-none-eabi-objdump -h -S binarycounter_led.elf  > "binarycounter_led.list"
+   text	   data	    bss	    dec	    hex	filename
+   1588	      0	   1568	   3156	    c54	binarycounter_led.elf
+Finished building: default.size.stdout
+ 
+Finished building: binarycounter_led.list
+ 
+17:55:31 **** Incremental Build of configuration Debug for project binarycounter_led ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DNUCLEO_F401RE -DSTM32 -DSTM32F401RETx -DSTM32F4 -c -I"C:/Users/Mujaid/Desktop/STM32/binarycounter_led/drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+../Src/main.c:34:4: warning: #warning "FPU is not initialized, but the project is compiling for an FPU. Please initialize the FPU before use." [-Wcpp]
+   34 |   #warning "FPU is not initialized, but the project is compiling for an FPU. Please initialize the FPU before use."
+      |    ^~~~~~~
+arm-none-eabi-gcc -o "binarycounter_led.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Mujaid\Desktop\STM32\binarycounter_led\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="binarycounter_led.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: binarycounter_led.elf
+ 
+arm-none-eabi-size  binarycounter_led.elf 
+arm-none-eabi-objdump -h -S binarycounter_led.elf  > "binarycounter_led.list"
+   text	   data	    bss	    dec	    hex	filename
+   1588	      0	   1568	   3156	    c54	binarycounter_led.elf
+Finished building: default.size.stdout
+ 
+Finished building: binarycounter_led.list
+ 
+18:14:18 **** Incremental Build of configuration Debug for project binarycounter_led ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DNUCLEO_F401RE -DSTM32 -DSTM32F401RETx -DSTM32F4 -c -I"C:/Users/Mujaid/Desktop/STM32/binarycounter_led/drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+../Src/main.c:34:4: warning: #warning "FPU is not initialized, but the project is compiling for an FPU. Please initialize the FPU before use." [-Wcpp]
+   34 |   #warning "FPU is not initialized, but the project is compiling for an FPU. Please initialize the FPU before use."
+      |    ^~~~~~~
+../Src/main.c: In function 'main':
+../Src/main.c:101:53: error: 'GPIO_PIN_PU' undeclared (first use in this function); did you mean 'GPIO_PIN_NO_1'?
+  101 |         BUTTON.GPIO_PinConfig.GPIO_PinPuPdControl = GPIO_PIN_PU;
+      |                                                     ^~~~~~~~~~~
+      |                                                     GPIO_PIN_NO_1
+../Src/main.c:101:53: note: each undeclared identifier is reported only once for each function it appears in
+../Src/main.c:130:17: warning: implicit declaration of function 'buzzer_beep' [-Wimplicit-function-declaration]
+  130 |                 buzzer_beep();
+      |                 ^~~~~~~~~~~
+make: *** [Src/subdir.mk:25: Src/main.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+18:14:33 **** Incremental Build of configuration Debug for project binarycounter_led ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DNUCLEO_F401RE -DSTM32 -DSTM32F401RETx -DSTM32F4 -c -I"C:/Users/Mujaid/Desktop/STM32/binarycounter_led/drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+../Src/main.c:34:4: warning: #warning "FPU is not initialized, but the project is compiling for an FPU. Please initialize the FPU before use." [-Wcpp]
+   34 |   #warning "FPU is not initialized, but the project is compiling for an FPU. Please initialize the FPU before use."
+      |    ^~~~~~~
+../Src/main.c: In function 'main':
+../Src/main.c:101:53: error: 'GPIO_PIN_PU' undeclared (first use in this function); did you mean 'GPIO_PIN_NO_1'?
+  101 |         BUTTON.GPIO_PinConfig.GPIO_PinPuPdControl = GPIO_PIN_PU;
+      |                                                     ^~~~~~~~~~~
+      |                                                     GPIO_PIN_NO_1
+../Src/main.c:101:53: note: each undeclared identifier is reported only once for each function it appears in
+../Src/main.c:130:17: warning: implicit declaration of function 'buzzer_beep' [-Wimplicit-function-declaration]
+  130 |                 buzzer_beep();
+      |                 ^~~~~~~~~~~
+make: *** [Src/subdir.mk:25: Src/main.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+18:15:06 **** Incremental Build of configuration Debug for project binarycounter_led ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DNUCLEO_F401RE -DSTM32 -DSTM32F401RETx -DSTM32F4 -c -I"C:/Users/Mujaid/Desktop/STM32/binarycounter_led/drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+../Src/main.c:34:4: warning: #warning "FPU is not initialized, but the project is compiling for an FPU. Please initialize the FPU before use." [-Wcpp]
+   34 |   #warning "FPU is not initialized, but the project is compiling for an FPU. Please initialize the FPU before use."
+      |    ^~~~~~~
+../Src/main.c: In function 'main':
+../Src/main.c:101:53: error: 'GPIO_PIN_PUPD' undeclared (first use in this function); did you mean 'GPIO_NO_PUPD'?
+  101 |         BUTTON.GPIO_PinConfig.GPIO_PinPuPdControl = GPIO_PIN_PUPD;
+      |                                                     ^~~~~~~~~~~~~
+      |                                                     GPIO_NO_PUPD
+../Src/main.c:101:53: note: each undeclared identifier is reported only once for each function it appears in
+../Src/main.c:130:17: warning: implicit declaration of function 'buzzer_beep' [-Wimplicit-function-declaration]
+  130 |                 buzzer_beep();
+      |                 ^~~~~~~~~~~
+make: *** [Src/subdir.mk:25: Src/main.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+18:15:20 **** Incremental Build of configuration Debug for project binarycounter_led ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DNUCLEO_F401RE -DSTM32 -DSTM32F401RETx -DSTM32F4 -c -I"C:/Users/Mujaid/Desktop/STM32/binarycounter_led/drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+../Src/main.c:34:4: warning: #warning "FPU is not initialized, but the project is compiling for an FPU. Please initialize the FPU before use." [-Wcpp]
+   34 |   #warning "FPU is not initialized, but the project is compiling for an FPU. Please initialize the FPU before use."
+      |    ^~~~~~~
+../Src/main.c: In function 'main':
+../Src/main.c:101:53: error: 'GPIO_PIN_PUPD' undeclared (first use in this function); did you mean 'GPIO_NO_PUPD'?
+  101 |         BUTTON.GPIO_PinConfig.GPIO_PinPuPdControl = GPIO_PIN_PUPD;
+      |                                                     ^~~~~~~~~~~~~
+      |                                                     GPIO_NO_PUPD
+../Src/main.c:101:53: note: each undeclared identifier is reported only once for each function it appears in
+../Src/main.c:130:17: warning: implicit declaration of function 'buzzer_beep' [-Wimplicit-function-declaration]
+  130 |                 buzzer_beep();
+      |                 ^~~~~~~~~~~
+make: *** [Src/subdir.mk:25: Src/main.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+18:16:19 **** Incremental Build of configuration Debug for project binarycounter_led ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DNUCLEO_F401RE -DSTM32 -DSTM32F401RETx -DSTM32F4 -c -I"C:/Users/Mujaid/Desktop/STM32/binarycounter_led/drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+../Src/main.c:34:4: warning: #warning "FPU is not initialized, but the project is compiling for an FPU. Please initialize the FPU before use." [-Wcpp]
+   34 |   #warning "FPU is not initialized, but the project is compiling for an FPU. Please initialize the FPU before use."
+      |    ^~~~~~~
+../Src/main.c: In function 'main':
+../Src/main.c:101:53: error: 'GPIO_PIN_PU' undeclared (first use in this function); did you mean 'GPIO_PIN_NO_1'?
+  101 |         BUTTON.GPIO_PinConfig.GPIO_PinPuPdControl = GPIO_PIN_PU;
+      |                                                     ^~~~~~~~~~~
+      |                                                     GPIO_PIN_NO_1
+../Src/main.c:101:53: note: each undeclared identifier is reported only once for each function it appears in
+../Src/main.c:130:17: warning: implicit declaration of function 'buzzer_beep' [-Wimplicit-function-declaration]
+  130 |                 buzzer_beep();
+      |                 ^~~~~~~~~~~
+make: *** [Src/subdir.mk:25: Src/main.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+18:19:14 **** Incremental Build of configuration Debug for project binarycounter_led ****
+make -j16 all 
+arm-none-eabi-gcc "../drivers/src/stm32f401xx_gpio_driver.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DNUCLEO_F401RE -DSTM32 -DSTM32F401RETx -DSTM32F4 -c -I"C:/Users/Mujaid/Desktop/STM32/binarycounter_led/drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"drivers/src/stm32f401xx_gpio_driver.d" -MT"drivers/src/stm32f401xx_gpio_driver.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "drivers/src/stm32f401xx_gpio_driver.o"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DNUCLEO_F401RE -DSTM32 -DSTM32F401RETx -DSTM32F4 -c -I"C:/Users/Mujaid/Desktop/STM32/binarycounter_led/drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+../Src/main.c:34:4: warning: #warning "FPU is not initialized, but the project is compiling for an FPU. Please initialize the FPU before use." [-Wcpp]
+   34 |   #warning "FPU is not initialized, but the project is compiling for an FPU. Please initialize the FPU before use."
+      |    ^~~~~~~
+../Src/main.c: In function 'main':
+../Src/main.c:130:17: warning: implicit declaration of function 'buzzer_beep' [-Wimplicit-function-declaration]
+  130 |                 buzzer_beep();
+      |                 ^~~~~~~~~~~
+arm-none-eabi-gcc -o "binarycounter_led.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Mujaid\Desktop\STM32\binarycounter_led\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="binarycounter_led.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/bin/ld.exe: ./Src/main.o: in function `main':
+C:/Users/Mujaid/Desktop/STM32/binarycounter_led/Debug/../Src/main.c:130:(.text.main+0x1a8): undefined reference to `buzzer_beep'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:64: binarycounter_led.elf] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+18:20:45 **** Incremental Build of configuration Debug for project binarycounter_led ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DNUCLEO_F401RE -DSTM32 -DSTM32F401RETx -DSTM32F4 -c -I"C:/Users/Mujaid/Desktop/STM32/binarycounter_led/drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+../Src/main.c:43:4: warning: #warning "FPU is not initialized, but the project is compiling for an FPU. Please initialize the FPU before use." [-Wcpp]
+   43 |   #warning "FPU is not initialized, but the project is compiling for an FPU. Please initialize the FPU before use."
+      |    ^~~~~~~
+../Src/main.c: In function 'main':
+../Src/main.c:110:53: error: 'GPIO_PIN_PUA' undeclared (first use in this function); did you mean 'GPIO_PIN_PU'?
+  110 |         BUTTON.GPIO_PinConfig.GPIO_PinPuPdControl = GPIO_PIN_PUA;
+      |                                                     ^~~~~~~~~~~~
+      |                                                     GPIO_PIN_PU
+../Src/main.c:110:53: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [Src/subdir.mk:25: Src/main.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+18:21:29 **** Incremental Build of configuration Debug for project binarycounter_led ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DNUCLEO_F401RE -DSTM32 -DSTM32F401RETx -DSTM32F4 -c -I"C:/Users/Mujaid/Desktop/STM32/binarycounter_led/drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+../Src/main.c:43:4: warning: #warning "FPU is not initialized, but the project is compiling for an FPU. Please initialize the FPU before use." [-Wcpp]
+   43 |   #warning "FPU is not initialized, but the project is compiling for an FPU. Please initialize the FPU before use."
+      |    ^~~~~~~
+arm-none-eabi-gcc -o "binarycounter_led.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Mujaid\Desktop\STM32\binarycounter_led\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="binarycounter_led.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: binarycounter_led.elf
+ 
+arm-none-eabi-size  binarycounter_led.elf 
+arm-none-eabi-objdump -h -S binarycounter_led.elf  > "binarycounter_led.list"
+   text	   data	    bss	    dec	    hex	filename
+   1840	      0	   1568	   3408	    d50	binarycounter_led.elf
+Finished building: default.size.stdout
+ 
+Finished building: binarycounter_led.list
+ 
+18:21:32 **** Incremental Build of configuration Debug for project binarycounter_led ****
+make -j16 all 
+arm-none-eabi-size  binarycounter_led.elf 
+   text	   data	    bss	    dec	    hex	filename
+   1840	      0	   1568	   3408	    d50	binarycounter_led.elf
+Finished building: default.size.stdout
+ 
+10:14:04 **** Clean-only build of configuration Debug for project binarycounter_led ****
+make -j16 clean 
+rm -rf ./drivers/src/stm32f401xx_gpio_driver.cyclo ./drivers/src/stm32f401xx_gpio_driver.d ./drivers/src/stm32f401xx_gpio_driver.o ./drivers/src/stm32f401xx_gpio_driver.su
+rm -rf ./Startup/startup_stm32f401retx.d ./Startup/startup_stm32f401retx.o
+rm -rf ./Src/main.cyclo ./Src/main.d ./Src/main.o ./Src/main.su ./Src/syscalls.cyclo ./Src/syscalls.d ./Src/syscalls.o ./Src/syscalls.su ./Src/sysmem.cyclo ./Src/sysmem.d ./Src/sysmem.o ./Src/sysmem.su
+rm -rf binarycounter_led.elf binarycounter_led.list binarycounter_led.map default.size.stdout
+ 
+10:14:05 **** Incremental Build of configuration Debug for project binarycounter_led ****
+make -j16 all 
+arm-none-eabi-gcc "../drivers/src/stm32f401xx_gpio_driver.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DNUCLEO_F401RE -DSTM32 -DSTM32F401RETx -DSTM32F4 -c -I"C:/Users/Mujaid/Desktop/STM32/binarycounter_led/drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"drivers/src/stm32f401xx_gpio_driver.d" -MT"drivers/src/stm32f401xx_gpio_driver.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "drivers/src/stm32f401xx_gpio_driver.o"
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f401retx.d" -MT"Startup/startup_stm32f401retx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Startup/startup_stm32f401retx.o" "../Startup/startup_stm32f401retx.s"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DNUCLEO_F401RE -DSTM32 -DSTM32F401RETx -DSTM32F4 -c -I"C:/Users/Mujaid/Desktop/STM32/binarycounter_led/drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DNUCLEO_F401RE -DSTM32 -DSTM32F401RETx -DSTM32F4 -c -I"C:/Users/Mujaid/Desktop/STM32/binarycounter_led/drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DNUCLEO_F401RE -DSTM32 -DSTM32F401RETx -DSTM32F4 -c -I"C:/Users/Mujaid/Desktop/STM32/binarycounter_led/drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/sysmem.o"
+../Src/main.c:43:4: warning: #warning "FPU is not initialized, but the project is compiling for an FPU. Please initialize the FPU before use." [-Wcpp]
+   43 |   #warning "FPU is not initialized, but the project is compiling for an FPU. Please initialize the FPU before use."
+      |    ^~~~~~~
+../Src/main.c: In function 'main':
+../Src/main.c:114:17: warning: unused variable 'count' [-Wunused-variable]
+  114 |         uint8_t count = 0;
+      |                 ^~~~~
+arm-none-eabi-gcc -o "binarycounter_led.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Mujaid\Desktop\STM32\binarycounter_led\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="binarycounter_led.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: binarycounter_led.elf
+ 
+arm-none-eabi-size  binarycounter_led.elf 
+arm-none-eabi-objdump -h -S binarycounter_led.elf  > "binarycounter_led.list"
+   text	   data	    bss	    dec	    hex	filename
+   1664	      0	   1568	   3232	    ca0	binarycounter_led.elf
+Finished building: default.size.stdout
+ 
+Finished building: binarycounter_led.list
+ 
+10:16:02 **** Incremental Build of configuration Debug for project binarycounter_led ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DNUCLEO_F401RE -DSTM32 -DSTM32F401RETx -DSTM32F4 -c -I"C:/Users/Mujaid/Desktop/STM32/binarycounter_led/drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+../Src/main.c:43:4: warning: #warning "FPU is not initialized, but the project is compiling for an FPU. Please initialize the FPU before use." [-Wcpp]
+   43 |   #warning "FPU is not initialized, but the project is compiling for an FPU. Please initialize the FPU before use."
+      |    ^~~~~~~
+../Src/main.c: In function 'main':
+../Src/main.c:114:17: warning: unused variable 'count' [-Wunused-variable]
+  114 |         uint8_t count = 0;
+      |                 ^~~~~
+arm-none-eabi-gcc -o "binarycounter_led.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Mujaid\Desktop\STM32\binarycounter_led\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="binarycounter_led.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: binarycounter_led.elf
+ 
+arm-none-eabi-size  binarycounter_led.elf 
+arm-none-eabi-objdump -h -S binarycounter_led.elf  > "binarycounter_led.list"
+   text	   data	    bss	    dec	    hex	filename
+   1580	      0	   1568	   3148	    c4c	binarycounter_led.elf
+Finished building: default.size.stdout
+ 
+Finished building: binarycounter_led.list
+ 
+10:20:22 **** Incremental Build of configuration Debug for project binarycounter_led ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DNUCLEO_F401RE -DSTM32 -DSTM32F401RETx -DSTM32F4 -c -I"C:/Users/Mujaid/Desktop/STM32/binarycounter_led/drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+../Src/main.c:49:4: warning: #warning "FPU is not initialized, but the project is compiling for an FPU. Please initialize the FPU before use." [-Wcpp]
+   49 |   #warning "FPU is not initialized, but the project is compiling for an FPU. Please initialize the FPU before use."
+      |    ^~~~~~~
+../Src/main.c: In function 'main':
+../Src/main.c:120:17: warning: unused variable 'count' [-Wunused-variable]
+  120 |         uint8_t count = 0;
+      |                 ^~~~~
+arm-none-eabi-gcc -o "binarycounter_led.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Mujaid\Desktop\STM32\binarycounter_led\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="binarycounter_led.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: binarycounter_led.elf
+ 
+arm-none-eabi-size  binarycounter_led.elf 
+arm-none-eabi-objdump -h -S binarycounter_led.elf  > "binarycounter_led.list"
+   text	   data	    bss	    dec	    hex	filename
+   1496	      0	   1568	   3064	    bf8	binarycounter_led.elf
+Finished building: default.size.stdout
+ 
+Finished building: binarycounter_led.list
+ 
+10:24:35 **** Incremental Build of configuration Debug for project binarycounter_led ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DNUCLEO_F401RE -DSTM32 -DSTM32F401RETx -DSTM32F4 -c -I"C:/Users/Mujaid/Desktop/STM32/binarycounter_led/drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+../Src/main.c:37:4: warning: #warning "FPU is not initialized, but the project is compiling for an FPU. Please initialize the FPU before use." [-Wcpp]
+   37 |   #warning "FPU is not initialized, but the project is compiling for an FPU. Please initialize the FPU before use."
+      |    ^~~~~~~
+arm-none-eabi-gcc -o "binarycounter_led.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Mujaid\Desktop\STM32\binarycounter_led\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="binarycounter_led.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: binarycounter_led.elf
+ 
+arm-none-eabi-size  binarycounter_led.elf 
+arm-none-eabi-objdump -h -S binarycounter_led.elf  > "binarycounter_led.list"
+   text	   data	    bss	    dec	    hex	filename
+   1860	      0	   1568	   3428	    d64	binarycounter_led.elf
+Finished building: default.size.stdout
+ 
+Finished building: binarycounter_led.list
+ 
+10:25:34 **** Incremental Build of configuration Debug for project binarycounter_led ****
+make -j16 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DNUCLEO_F401RE -DSTM32 -DSTM32F401RETx -DSTM32F4 -c -I"C:/Users/Mujaid/Desktop/STM32/binarycounter_led/drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+../Src/main.c:37:4: warning: #warning "FPU is not initialized, but the project is compiling for an FPU. Please initialize the FPU before use." [-Wcpp]
+   37 |   #warning "FPU is not initialized, but the project is compiling for an FPU. Please initialize the FPU before use."
+      |    ^~~~~~~
+arm-none-eabi-gcc -o "binarycounter_led.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Mujaid\Desktop\STM32\binarycounter_led\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="binarycounter_led.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: binarycounter_led.elf
+ 
+arm-none-eabi-size  binarycounter_led.elf 
+arm-none-eabi-objdump -h -S binarycounter_led.elf  > "binarycounter_led.list"
+   text	   data	    bss	    dec	    hex	filename
+   1860	      0	   1568	   3428	    d64	binarycounter_led.elf
+Finished building: default.size.stdout
+ 
+Finished building: binarycounter_led.list
+ 
+11:04:07 **** Incremental Build of configuration Debug for project binarycounter_led ****
+make -j16 all 
+arm-none-eabi-size  binarycounter_led.elf 
+   text	   data	    bss	    dec	    hex	filename
+   1860	      0	   1568	   3428	    d64	binarycounter_led.elf
+Finished building: default.size.stdout
+ 

@@ -1,0 +1,19 @@
+00:42:08 **** Incremental Build of configuration Debug for project binary_counter ****
+make -j16 all 
+arm-none-eabi-gcc -o "binary_counter.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Mujaid\Desktop\STM32\binary_counter\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="binary_counter.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/bin/ld.exe: ./Src/main.o: in function `main':
+C:/Users/Mujaid/Desktop/STM32/binary_counter/Debug/../Src/main.c:42:(.text.main+0xa): undefined reference to `GPIO_PeriClockControl'
+C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/bin/ld.exe: C:/Users/Mujaid/Desktop/STM32/binary_counter/Debug/../Src/main.c:52:(.text.main+0x36): undefined reference to `GPIO_Init'
+C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/bin/ld.exe: C:/Users/Mujaid/Desktop/STM32/binary_counter/Debug/../Src/main.c:62:(.text.main+0x62): undefined reference to `GPIO_Init'
+C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/bin/ld.exe: C:/Users/Mujaid/Desktop/STM32/binary_counter/Debug/../Src/main.c:72:(.text.main+0x84): undefined reference to `GPIO_Init'
+C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/bin/ld.exe: C:/Users/Mujaid/Desktop/STM32/binary_counter/Debug/../Src/main.c:83:(.text.main+0xa4): undefined reference to `GPIO_Init'
+C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/bin/ld.exe: C:/Users/Mujaid/Desktop/STM32/binary_counter/Debug/../Src/main.c:90:(.text.main+0xbe): undefined reference to `GPIO_WriteToOutputPin'
+C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/bin/ld.exe: C:/Users/Mujaid/Desktop/STM32/binary_counter/Debug/../Src/main.c:93:(.text.main+0xd6): undefined reference to `GPIO_WriteToOutputPin'
+C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/bin/ld.exe: C:/Users/Mujaid/Desktop/STM32/binary_counter/Debug/../Src/main.c:96:(.text.main+0xee): undefined reference to `GPIO_WriteToOutputPin'
+C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/bin/ld.exe: C:/Users/Mujaid/Desktop/STM32/binary_counter/Debug/../Src/main.c:100:(.text.main+0x106): undefined reference to `GPIO_WriteToOutputPin'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:66: binary_counter.elf] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+
+00:42:08 Build Failed. 10 errors, 0 warnings. (took 326ms)
+

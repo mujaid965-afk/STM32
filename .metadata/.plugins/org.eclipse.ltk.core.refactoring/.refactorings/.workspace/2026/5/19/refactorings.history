@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;led_assignment&apos; to &apos;lGPIO_LED_assignment&apos;" description="Rename resource &apos;led_assignment&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/led_assignment" name="lGPIO_LED_assignment" stamp="1778349957387" updateReferences="true"/>
+</session>

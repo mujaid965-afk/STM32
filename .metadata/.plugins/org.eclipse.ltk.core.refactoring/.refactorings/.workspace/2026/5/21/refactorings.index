@@ -1,0 +1,6 @@
+1779124742091	Delete resource 'binary_counter'
+1779130396567	Delete resource 'binary_counter/drivers/inc/stm32f401xx.h'
+1779130435814	Delete resource 'binary_counter/drivers/inc/stm32f401xx_gpio_driver.h'
+1779130490122	Delete resource 'binary_counter/drivers/src/stm32f401xx_gpio_driver.c'
+1779131137361	Delete resource 'binary_counter/drivers/src/stm32f401xx_gpio_driver.c'
+1779131970550	Delete resource 'binary_counter'
